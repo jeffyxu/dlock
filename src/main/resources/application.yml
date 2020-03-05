@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    zookeeper:
+      discovery:
+        #instance-host: www.heiiyo.com
+        #enabled: true
+        #instance-port: 2181
+
+      connect-string: www.heiiyo.com:2181
+  application:
+    name: dlock
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://www.heiiyo.com:3306/dlock?useUnicode=true&characterEncoding=utf8&useSSL=false
+    password: 123456
+    username: root
+  redis:
+    host: www.heiiyo.com
+    port: 6379
+  lock:
+    lock_type: redis
+    is_reentrant: true
